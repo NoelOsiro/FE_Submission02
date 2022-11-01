@@ -25,6 +25,7 @@ body{
     border-right: 1px grey solid;
 }
 
+
 /* Sidebar css profile section */
 .wrapper .sidebar .profile{
     margin-top: 10px;
@@ -52,12 +53,9 @@ body{
 .wrapper .sidebar ul li a.active{
 	color: #ff8800;
 	background:white;
-    border-right: 2px solid #ff8800;
+    border-right: 3px solid #ff8800;
 }
-.wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon{
-	color: #0c7db1;
-}
+
 .wrapper .sidebar ul li a:hover:before,
 .wrapper .sidebar ul li a.active:before{
 	display: block;
