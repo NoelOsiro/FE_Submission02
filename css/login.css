@@ -79,7 +79,7 @@ form input {
 
 form .field input:focus,
 form .field.valid input {
-    border-color: #f27503;
+    border-color: #68aa00;
 }
 
 form .field.shake input,

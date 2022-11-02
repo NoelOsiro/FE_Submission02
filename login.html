@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Local style sheet relative to workspace folder -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link  rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <div class="wrapper">
@@ -18,15 +18,16 @@
                 <img src="/images/logo.svg" alt="" >
             </div>
             <form action="#">
+                <div id="loginError"></div>
                 <div class="field username">
                   <div class="input-area">
-                    <input type="text" placeholder="Username">
+                    <input type="text" id="user_01" placeholder="Username">
                   </div>
                   <div class="error error-txt">Username can't be blank</div>
                 </div>
                 <div class="field password">
                   <div class="input-area">
-                    <input type="password" placeholder="Password">
+                    <input type="password" id="pass_01" placeholder="Password">
                   </div>
                   <div class="error error-txt">Password can't be blank</div>
                 </div>
@@ -34,6 +35,6 @@
               </form>
         </div>   
     </div>
-    <script src="/js/login.js"></script>
+    <script type="module" src="/js/login.js"></script>
 </body>
 </html>
