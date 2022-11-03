@@ -35,7 +35,6 @@ form.onsubmit = (e) => {
     }
     (eInput.value == "") ? eField.classList.add("shake", "error") : checkUsername();
     (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
-
     setTimeout(() => { //remove shake class after 500ms
         eField.classList.remove("shake");
         pField.classList.remove("shake");
@@ -44,16 +43,12 @@ form.onsubmit = (e) => {
     eInput.onkeyup = () => { checkUsername(); } //calling checkUsername function on username input keyup
     pInput.onkeyup = () => { checkPass(); } //calling checkPassword function on pass input keyup
 
-
-
     //if eField and pField doesn't contains error class that mean user filled details properly
     if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
         const formData = {
             "username": document.getElementById("user_01").value,
             "password": document.getElementById("pass_01").value
         }
-        const response=Login(formData)
-        console.log(response);
-        // window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
+        Login(formData) 
     }
 }
