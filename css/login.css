@@ -27,6 +27,15 @@
     font-size: x-large;
     font-weight: 100;
 }
+#loginError.errorClass{
+    border: 1px solid;
+	margin: 10px auto;
+	padding: 10px;
+	background-position: 10px center;
+    color: #D8000C;
+    font-weight: bold;
+	background-color: #FFBABA
+}
 
 /* Form and fields */
 form {

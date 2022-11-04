@@ -20,13 +20,21 @@ export const Login = async (formData) => {
             if (response.ok) { 
                 return response.json()
             }
-            if (response.status>=400 && response.status<500){
-                window.location.replace('/login.html')
+            if (response.status==401){
+                return response.json()
             }
         })
         .then((data)=>{
-            StoreToken(data)
-            window.location.href='/index.html';
+            if(data.access_token){
+                StoreToken(data)
+                window.location.href='/index.html';
+            }
+            else{
+                let error= document.getElementById('loginError');
+                error.classList.add('errorClass');
+                error.textContent=data.msg
+            }
+            
         })
         .catch((error) => {
             console.error(error)
