@@ -1,4 +1,4 @@
-import {GetOrders} from '../../Services/OrderService.js';
+import {GetOrders} from '../../public/Services/OrderService.js';
 // Get the input field
 let input = document.getElementById("myInput");
 let access_token= localStorage.getItem('access_token');
@@ -10,9 +10,6 @@ else{
         // If the user presses the "Enter" key on the keyboard
         if (event.key === "Enter") {
           event.preventDefault();
-          const data ={
-              'q':input.value
-          }
           GetOrders(access_token,1,input.value)
         }
       });
