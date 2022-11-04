@@ -1,9 +1,9 @@
-import {GetOrders} from '../Services/OrderService.js';
+import {GetOrders} from '../../Services/OrderService.js';
 // Get the input field
 let input = document.getElementById("myInput");
 let access_token= localStorage.getItem('access_token');
 if (!access_token){
-    window.location.replace('/login.html');
+    window.location.replace('/public/login.html');
 }
 else{
     input.addEventListener("keypress", function(event) {

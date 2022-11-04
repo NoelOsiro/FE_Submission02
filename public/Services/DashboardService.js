@@ -17,7 +17,7 @@ export const GetDash = (access_token) => {
                 return response.json();
             }
             if (response.status>=400 && response.status<500){
-                window.location.replace('/login.html')
+                window.location.replace('/public/login.html')
             }
         })
         .then((data)=>{

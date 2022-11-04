@@ -27,7 +27,7 @@ export const Login = async (formData) => {
         .then((data)=>{
             if(data.access_token){
                 StoreToken(data)
-                window.location.href='/index.html';
+                window.location.href='/public/index.html';
             }
             else{
                 let error= document.getElementById('loginError');

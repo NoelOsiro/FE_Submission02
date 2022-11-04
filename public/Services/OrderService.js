@@ -17,7 +17,7 @@ export const GetOrders = (access_token,page,q) => {
                 return response.json();
             }
             if (response.status>=400 && response.status<500){
-                window.location.replace('/login.html')
+                window.location.replace('/public/login.html')
             }
         })
         .then((data)=>{
