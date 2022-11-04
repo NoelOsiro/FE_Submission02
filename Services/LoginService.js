@@ -20,6 +20,9 @@ export const Login = async (formData) => {
             if (response.ok) { 
                 return response.json()
             }
+            if (response.status>=400 && response.status<500){
+                window.location.replace('/login.html')
+            }
         })
         .then((data)=>{
             StoreToken(data)

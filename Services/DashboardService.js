@@ -16,6 +16,9 @@ export const GetDash = (access_token) => {
             if (response.ok) {
                 return response.json();
             }
+            if (response.status>=400 && response.status<500){
+                window.location.replace('/login.html')
+            }
         })
         .then((data)=>{
             StoreDashBoard(data)

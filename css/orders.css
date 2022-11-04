@@ -70,7 +70,7 @@ section#myOrder {
 }
 
 .tablecontainer {
-    height: 200px;
+    height: 500px;
     overflow-y: scroll;
 }
 
@@ -105,4 +105,17 @@ section#myOrder {
     text-align: left;
     background-color: #04AA6D;
     color: white;
+}
+#result> tr>td.red {
+    color: red;
+}
+#result> tr>td.green {
+    color: green;
+}
+#result> tr>td.normal {
+    color: black;
+    font-weight: 500;
+}
+#result> tr>td::first-letter {
+    text-transform: capitalize;
 }
