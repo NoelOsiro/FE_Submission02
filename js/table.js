@@ -1,16 +1,20 @@
 let best_sellers = JSON.parse(localStorage.getItem('dashboard')).bestsellers;
+best_sellers.sort(function (a, b) {
+    return b.units - a.units
+})
 
-    let table = "";
+let table = "";
 
-    for (var i in best_sellers) {
-        table += "<tr>";
-        table += "<td>"
-            + best_sellers[i].product.name + "</td>"
-            + "<td>" + (best_sellers[i].revenue/best_sellers[i].units) + "</td>"
-            + "<td>" + best_sellers[i].units + "</td>"
-            + "<td>" + best_sellers[i].revenue + "</td>";
-        table += "</tr>";
-    }
 
-    document.getElementById("result").innerHTML = table;
+for (var i in best_sellers.slice(0, 3)) {
+    table += "<tr>";
+    table += "<td>"
+        + best_sellers[i].product.name + "</td>"
+        + "<td>" + (best_sellers[i].revenue / best_sellers[i].units) + "</td>"
+        + "<td>" + best_sellers[i].units + "</td>"
+        + "<td>" + best_sellers[i].revenue + "</td>";
+    table += "</tr>";
+}
+
+document.getElementById("result").innerHTML = table;
 

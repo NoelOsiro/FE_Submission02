@@ -1,0 +1,108 @@
+/* Dashboard Style css */
+section#myOrder {
+    top: 10px;
+    left: 245px;
+    position: absolute;
+    padding: 10px;
+    right: 0;
+}
+
+#myOrder> .section_header> {
+    display: flex!important;
+}
+
+#myOrder> .section_header>h2 {
+    font-weight: 300;
+    color: #171716a1;
+    width: 50%;
+}
+
+#myOrder> .section_header>input {
+    margin-left: auto;
+}
+
+
+#myInput {
+    background-image: url('/images/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 50%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    background-color: #e2e3e5;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.card__title {
+
+    font-weight: normal;
+    color: #0a0a0a;
+}
+
+.card__apply {
+
+    align-self: center;
+}
+
+.tablecontainer {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#orders {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#orders thead {
+    position: sticky;
+    top: 0;
+}
+
+#orders td,
+#orders th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#orders tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#orders tr:hover {
+    background-color: #ddd;
+}
+
+#orders th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
