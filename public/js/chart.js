@@ -32,16 +32,24 @@ const getChart = (labels, values) => {
     return config;
 }
 
-
 t.innerHTML = "Revenue (Last 7 days)";
 const config = getChart(labels1, values1)
 forecast_chart = new Chart(chartArea, config);
+
 
 function ButtonToggle() {
     if (toggleInput.checked == true) {
         t.innerHTML = "Revenue (Last 12 months)";
         const config = getChart(labels2, values2)
-        if (forecast_chart!=null){
+        if (forecast_chart != null) {
+            forecast_chart.destroy()
+        }
+        forecast_chart = new Chart(chartArea, config);
+    }
+    else {
+        t.innerHTML = "Revenue (Last 7 days)";
+        const config = getChart(labels1, values1)
+        if (forecast_chart != null) {
             forecast_chart.destroy()
         }
         forecast_chart = new Chart(chartArea, config);
