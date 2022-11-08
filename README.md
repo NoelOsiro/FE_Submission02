@@ -1,5 +1,7 @@
 <h3 align="center">Submission for the Front-End Assessment Challange</h3>
 
+- 🤝  Implement the following views: **Login, Dashboard, Orders**
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
