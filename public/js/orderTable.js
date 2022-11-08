@@ -1,7 +1,8 @@
-
+//Init
 let orders = JSON.parse(localStorage.getItem('orders'));
 const myTable = document.getElementById("result");
 
+//config
 for (let order of orders) {
     let tr = document.createElement('tr');
     let td1 = document.createElement('td');
@@ -16,6 +17,8 @@ for (let order of orders) {
     let td4 = document.createElement('td');
     td4.textContent = order.status;
     tr.appendChild(td4); 
+
+    //render  
     if (td4.textContent==='delivered'){
         td4.classList.add('green')
     }

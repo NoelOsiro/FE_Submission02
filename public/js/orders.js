@@ -1,7 +1,10 @@
 import {GetOrders} from '../../public/Services/OrderService.js';
-// Get the input field
+// Init
+
 let input = document.getElementById("myInput");
 let access_token= localStorage.getItem('access_token');
+
+//config
 if (!access_token){
     window.location.replace('/public/login.html');
 }
