@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e4d4141f-0c64-40cf-845a-e8b367c03a93",
+		"name": "FE submission 02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73a773df-6466-4259-a11b-63d1b0d5e5b5",
+						"exec": [
+							"var headerValue = pm.response.json();\r",
+							"pm.environment.set(\"authToken\", headerValue.access_token);\r",
+							"pm.environment.set(\"refreshToken\", headerValue.refresh_token);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "5a88c28c-359e-40ac-ad77-549e052746d6",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"freddy\",\r\n    \"password\": \"ElmStreet2019\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "{{BaseUrl}}/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"_postman_id": "36c0587d-d974-45bb-9f90-2fec3bda7a07",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": "{{BaseUrl}}/dashboard",
+				"description": "Get Dashboard data"
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b608318-7f05-4761-9d42-cb48151fb8d3",
+						"exec": [
+							"var headerValue = pm.response.json();\r",
+							"pm.environment.set(\"authToken\", headerValue.access_token);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "578c8a96-2259-4a47-a9a9-87d30556f143",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{refreshToken}}",
+						"type": "text"
+					}
+				],
+				"url": "{{BaseUrl}}/refresh",
+				"description": "Refresh Token"
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"_postman_id": "4fca1021-cf13-4cf5-b362-74033b7c9f0d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/orders?page=1&q=search_term",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "search_term"
+						}
+					]
+				},
+				"description": "Filter orders"
+			},
+			"response": []
+		}
+	]
+}
