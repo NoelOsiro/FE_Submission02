@@ -14,7 +14,8 @@
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
 <h3 align="left">Structure:</h3>
 <img align="left" src="https://th.bing.com/th/id/R.c5670fe80301e228fac23753a091cd71?rik=UiTT%2bmarQ4it2Q&riu=http%3a%2f%2f4.bp.blogspot.com%2f-hn1n27fgQy8%2fUYkIWx588hI%2fAAAAAAAAC4c%2fhBgGawK01oQ%2fs1600%2fTraditional%2bN-Tier.jpg&ehk=1vZxx4L8%2fQmbrAlY4qtMIQVaCnIMpIpNbmcfis4wUmM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"  width="300" height="300" alt="NoelOsiro" />
-```bash
+
+```python
 Pages (Presentation)
 Services( Data Acess)
 Js(Business logic)
