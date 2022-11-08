@@ -1,5 +1,9 @@
 <h3 align="center">Submission for the Front-End Assessment Challange</h3>
 
+- 🔭 Implement assignment using JavaScript do not use a framework. **Javascript**
+
+- 👷🏽‍♀️Build out the project to the designs inside the `/Designs` folder. **/Designs**
+
 - 🤝  Implement the following views: **Login, Dashboard, Orders**
 
 <h3 align="left">Connect with me:</h3>
